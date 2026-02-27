@@ -1,3 +1,11 @@
 {
-    "title":"Hello"
+  "navigation": {
+    "home": "Home",
+    "courses": "Courses",
+    "contact": "Contact",
+    "about": "About Us"
+  },
+  "home": {
+    "title": "Hello"
+  }
 }
