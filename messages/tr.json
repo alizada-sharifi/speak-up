@@ -7,5 +7,34 @@
   },
   "home": {
     "title": "Merhaba"
+  },
+  "auth": {
+    "welcomeText": "Hoş geldiniz, görünüşe göre burada yenisiniz!",
+    "signUp": {
+      "title": "Kayıt Ol",
+      "fullName": "Ad Soyad",
+      "fullNamePlaceholder": "Adınızı ve soyadınızı girin",
+      "email": "E-posta",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "password": "Şifre",
+      "passwordPlaceholder": "Şifrenizi girin",
+      "buttonLabel": "Kayıt Ol",
+      "haveAccount": "Zaten bir hesabınız var mı?",
+      "accountLink": "Giriş Yap"
+    },
+    "Login": {
+      "title": "Giriş Yap",
+      "newToSpeakUp": "Speak Up'a yeni misiniz?",
+      "email": "E-posta",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "password": "Şifre",
+      "rememberMe": "Beni Hatırla",
+      "forgotPassword": "Şifremi Unuttum",
+      "passwordPlaceholder": "Şifrenizi girin",
+      "buttonLabel": "Giriş Yap",
+      "orContinueWith": "Ya da şununla devam et",
+      "DontHaveAccount": "Hesabınız yok mu?",
+      "accountLink": "Kayıt Ol"
+    }
   }
 }

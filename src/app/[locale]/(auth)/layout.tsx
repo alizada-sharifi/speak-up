@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function AuthLayout({
@@ -5,6 +6,7 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const t = useTranslations('auth');
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 py-10 w-3xl mx-auto rounded-md">
@@ -16,8 +18,8 @@ export default function AuthLayout({
             height={320}
             className="object-cover w-full rounded-l-md hidden md:block"
           />
-          <p className="text-neutral-500 text-sm absolute top-7 left-6">
-            Welcome, Looks like <br /> you’re new here!
+          <p className="text-neutral-500 max-w-40 text-sm absolute top-7 left-6">
+            {t('welcomeText')}
           </p>
         </div>
 

@@ -8,10 +8,12 @@ import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 type FormValues = z.infer<typeof authSchema>;
 
 export default function Login() {
+  const t = useTranslations('auth');
   const {
     register,
     handleSubmit,
@@ -29,29 +31,29 @@ export default function Login() {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col gap-5 py-16 px-4 md:px-8"
     >
-      <h3 className="text-xl md:text-2xl font-bold">Login</h3>
+      <h3 className="text-xl md:text-2xl font-bold">{t('Login.title')}</h3>
       <div className="flex gap-1 text-sm">
-        <p className="text-center">New to Speak Up?</p>
+        <p className="text-center">{t('Login.newToSpeakUp')}?</p>
         <Link href="/sign-up" className="text-primary-400">
-          Sign Up
+          {t('Login.accountLink')}
         </Link>
       </div>
 
       <Input
-        label="Email"
+        label={t('Login.email')}
         name="email"
         type="email"
-        placeholder="Enter your email"
+        placeholder={t('Login.emailPlaceholder')}
         register={register}
         error={errors.email}
         required
       />
 
       <Input
-        label="Password"
+        label={t('Login.password')}
         name="password"
         type="password"
-        placeholder="Enter password"
+        placeholder={t('Login.passwordPlaceholder')}
         register={register}
         error={errors.password}
         required
@@ -88,24 +90,28 @@ export default function Login() {
               </svg>
             </div>
 
-            <span className="text-sm text-gray-700">Remember Me</span>
+            <span className="text-sm text-gray-700">
+              {t('Login.rememberMe')}
+            </span>
           </label>
         </div>
         <Link href="/forgot-password" className="hover:text-primary-400">
-          Forgot password?
+          {t('Login.forgotPassword')}
         </Link>
       </div>
 
       <Button className="bg-primary-400 rounded-sm cursor-pointer hover:bg-primary-500 transition-colors duration-150">
-        Sign In
+        {t('Login.buttonLabel')}
       </Button>
 
       {/* sign in with providers */}
       <div className="flex flex-col gap-2">
-        <div className="flex items-center justify-center gap-5">
-          <div className="w-16 md:w-20 h-px bg-neutral-200" />
-          <p className="text-neutral-400 text-sm">Or continue with</p>
-          <div className="w-16 md:w-20 h-px bg-neutral-200" />
+        <div className="flex items-center gap-4">
+          <div className="h-px flex-1 bg-neutral-200" />
+          <p className="text-neutral-400 text-sm whitespace-nowrap">
+            {t('Login.orContinueWith')}
+          </p>
+          <div className="h-px flex-1 bg-neutral-200" />
         </div>
 
         <div className="flex gap-3 items-center justify-center">
@@ -139,9 +145,9 @@ export default function Login() {
       </div>
 
       <div className="flex justify-center gap-1 text-center text-sm">
-        <p className="text-center">Don&apos;t have an Account?</p>
+        <p className="text-center">{t('Login.DontHaveAccount')}</p>
         <Link href="/sign-up" className="text-primary-400">
-          Sign Up
+          {t('Login.accountLink')}
         </Link>
       </div>
     </form>
