@@ -1,3 +1,5 @@
-export default function SignUpPage() {
-  return <div>Sign up page</div>;
+import SignUp from '@/components/auth-form/SignUp';
+
+export default function SignUpage() {
+  return <SignUp />;
 }
