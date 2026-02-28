@@ -26,7 +26,7 @@ export const footerData = [
   },
 
   {
-    title: "footer.courses",
+    title: "footer.products",
     values: [
       { label: "navigation.landingPage", value: "/" },
       { label: "navigation.about", value: "/" },

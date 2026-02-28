@@ -3,6 +3,7 @@ import { ROUTES } from "@/constants/route";
 import { Link } from "@/i18n/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { Facebook, Linkedin, X } from "../icons";
 
 async function Footer() {
   const t = await getTranslations();
@@ -12,7 +13,11 @@ async function Footer() {
         <div>
           <p className="max-sm:text-sm">{t("footer.desc")}</p>
 
-          <div className="flex items-center gap-3"></div>
+          <div className="flex items-center gap-6 mt-4">
+            <Facebook />
+            <Linkedin />
+            <X />
+          </div>
         </div>
 
         {footerData.map((item) => (
