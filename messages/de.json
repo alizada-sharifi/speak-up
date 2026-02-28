@@ -1,9 +1,26 @@
 {
+  "common": {
+    "privacyPolicy": "Datenschutzbestimmungen",
+    "terms": "Allgemeine Geschäftsbedingungen"
+  },
   "navigation": {
     "home": "Startseite",
     "courses": "Kurse",
     "contact": "Kontakt",
-    "about": "Über uns"
+    "about": "Über uns",
+    "landingPage": "Landingpage"
+  },
+  "footer": {
+    "desc": "Flüssigkeit ist nichts anderes, als die 100 wichtigsten realen Gespräche zu meistern",
+    "courses": "Speak up Kurse",
+    "learnEnglish": "Englisch lernen",
+    "learnFrench": "Französisch lernen",
+    "learnTurkey": "Türkisch lernen",
+    "learnGerman": "Deutsch lernen",
+    "products": "Produkte",
+    "contactInfo": "Kontaktinformationen",
+    "address": "Herat, Afghanistan",
+    "copyRight": "2026 Speakup. Alle Rechte vorbehalten."
   },
   "home": {
     "title": "Hallo"

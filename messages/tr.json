@@ -1,9 +1,26 @@
 {
+  "common": {
+    "privacyPolicy": "Gizlilik Politikası",
+    "terms": "Şartlar ve Koşullar"
+  },
   "navigation": {
     "home": "Ana Sayfa",
     "courses": "Kurslar",
     "contact": "İletişim",
-    "about": "Hakkımızda"
+    "about": "Hakkımızda",
+    "landingPage": "Açılış Sayfası"
+  },
+  "footer": {
+    "desc": "Akıcılık, en önemli 100 gerçek hayat konuşmasını ustaca kullanmaktan başka bir şey değildir",
+    "courses": "Speak up kursları",
+    "learnEnglish": "İngilizce öğren",
+    "learnFrench": "Fransızca öğren",
+    "learnTurkey": "Türkçe öğren",
+    "learnGerman": "Almanca öğren",
+    "products": "Ürünler",
+    "contactInfo": "İletişim bilgileri",
+    "address": "Herat, Afganistan",
+    "copyRight": "2026 Speakup. Tüm hakları saklıdır."
   },
   "home": {
     "title": "Merhaba"

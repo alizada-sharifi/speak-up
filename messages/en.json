@@ -1,9 +1,26 @@
 {
+  "common": {
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
   "navigation": {
     "home": "Home",
     "courses": "Courses",
     "contact": "Contact",
-    "about": "About Us"
+    "about": "About Us",
+    "landingPage": "Landing page"
+  },
+  "footer": {
+    "desc": "Fluency is nothing more than mastering the 100 most important real-life conversations",
+    "courses": "Speak up courses",
+    "learnEnglish": "Learn English",
+    "learnFrench": "Learn French",
+    "learnTurkey": "Learn Turkish",
+    "learnGerman": "Learn German",
+    "products": "Products",
+    "contactInfo": "Contact information",
+    "address": "Herat, Afghanistan",
+    "copyRight": "2026 Speakup. All Rights Reserved."
   },
   "home": {
     "title": "Hello"
