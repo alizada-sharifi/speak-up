@@ -1,9 +1,26 @@
 {
+  "common": {
+    "privacyPolicy": "Politique de confidentialité",
+    "terms": "Conditions générales"
+  },
   "navigation": {
     "home": "Accueil",
     "courses": "Cours",
     "contact": "Contact",
-    "about": "À propos de nous"
+    "about": "À propos",
+    "landingPage": "Page d'accueil"
+  },
+  "footer": {
+    "desc": "La fluidité n'est rien d'autre que de maîtriser les 100 conversations réelles les plus importantes",
+    "courses": "Cours Speak up",
+    "learnEnglish": "Apprendre l'anglais",
+    "learnFrench": "Apprendre le français",
+    "learnTurkey": "Apprendre le turc",
+    "learnGerman": "Apprendre l'allemand",
+    "products": "Produits",
+    "contactInfo": "Informations de contact",
+    "address": "Herat, Afghanistan",
+    "copyRight": "2026 Speakup. Tous droits réservés."
   },
   "home": {
     "title": "Bonjour"
