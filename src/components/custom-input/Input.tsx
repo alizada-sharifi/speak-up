@@ -1,76 +1,104 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from 'react';
-import { FieldError, UseFormRegister } from 'react-hook-form';
-import { MdOutlineMail } from 'react-icons/md';
-import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
+'use client';
 
-type InputProps = {
-  label: string;
-  name: string;
-  type?: string;
+import type { Control, FieldPath, FieldValues } from 'react-hook-form';
+import React from 'react';
+import {
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
+
+export type CustomInputProps<
+  TFieldValues extends FieldValues = FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+> = {
+  control: Control<TFieldValues>;
+  name: TName;
+  label?: string;
+  description?: string;
   placeholder?: string;
-  register: UseFormRegister<any>;
-  error?: FieldError;
+  type?: React.HTMLInputTypeAttribute;
+  containerClassName?: string;
+  labelClassName?: string;
   required?: boolean;
-  disabled?: boolean;
-};
+  inputClassName?: string;
+} & Omit<React.ComponentProps<'input'>, 'name' | 'defaultValue'>;
 
-export const Input = ({
-  label,
+const CustomInput = <
+  TFieldValues extends FieldValues = FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
+  control,
   name,
+  label,
+  description,
+  placeholder = 'Enter value',
   type = 'text',
-  placeholder,
-  register,
-  error,
-  required,
-  disabled,
-}: InputProps) => {
-  const [showPassword, setShowPassword] = useState(false);
-
-  const isPassword = type === 'password';
-  const isEmail = type === 'email';
+  containerClassName,
+  labelClassName,
+  required = false,
+  inputClassName,
+  ...rest
+}: CustomInputProps<TFieldValues, TName>) => {
+  const isNumber = type === 'number';
 
   return (
-    <div className="flex flex-col gap-1">
-      <label className="text-sm font-medium">
-        {label}
-        {required && <span className="text-red-500 ml-1">*</span>}
-      </label>
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem className={cn(containerClassName)}>
+          {label && (
+            <FormLabel
+              className={cn(
+                'block text-sm font-semibold text-primary-550',
+                labelClassName,
+              )}
+            >
+              {label} {required && <span className="text-red-600">*</span>}
+            </FormLabel>
+          )}
 
-      <div className="relative">
-        <input
-          type={isPassword ? (showPassword ? 'text' : 'password') : type}
-          placeholder={placeholder}
-          disabled={disabled}
-          {...register(name)}
-          className={`ring rounded-sm w-full bg-white px-3 py-2 text-sm outline-none transition
-          ${isEmail ? 'pr-10' : ''}
-          ${isPassword ? 'pr-10' : ''}
-          ${
-            error
-              ? 'ring-red-500 focus:ring-red-500'
-              : 'ring-neutral-200 focus:ring-primary-400'
-          }`}
-        />
+          {description && <FormDescription>{description}</FormDescription>}
 
-        {/* Email Icon */}
-        {isEmail && (
-          <MdOutlineMail className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg pointer-events-none" />
-        )}
+          <FormControl>
+            <Input
+              {...field}
+              {...rest}
+              placeholder={placeholder}
+              type={type}
+              value={
+                isNumber
+                  ? field.value === undefined || field.value === 0
+                    ? ''
+                    : field.value
+                  : (field.value ?? '')
+              }
+              onChange={(e) => {
+                if (isNumber) {
+                  const val = e.target.value;
+                  field.onChange(val === '' ? undefined : Number(val));
+                } else {
+                  field.onChange(e.target.value);
+                }
+              }}
+              className={cn(
+                'w-full rounded-sm p-3 text-sm sm:text-base font-medium border border-neutral-200 transition-all duration-200 focus-within:ring-1 focus-within:ring-primary-450',
+                inputClassName,
+              )}
+            />
+          </FormControl>
 
-        {/* Password Toggle */}
-        {isPassword && (
-          <button
-            type="button"
-            onClick={() => setShowPassword((prev) => !prev)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg"
-          >
-            {showPassword ? <IoEyeOutline /> : <IoEyeOffOutline />}
-          </button>
-        )}
-      </div>
-
-      {error && <p className="text-red-500 text-xs">{error.message}</p>}
-    </div>
+          <FormMessage className="text-xs text-red-600" />
+        </FormItem>
+      )}
+    />
   );
 };
+
+export default CustomInput;
