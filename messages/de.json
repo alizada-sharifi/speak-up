@@ -24,5 +24,39 @@
   },
   "home": {
     "title": "Hallo"
+  },
+  "auth": {
+    "welcomeText": "Willkommen, es sieht so aus, als wärst du neu hier!",
+    "signUp": {
+      "title": "Registrieren",
+      "fullName": "Vollständiger Name",
+      "fullNamePlaceholder": "Gib deinen vollständigen Namen ein",
+      "email": "E-Mail",
+      "emailPlaceholder": "Gib deine E-Mail ein",
+      "password": "Passwort",
+      "passwordPlaceholder": "Gib dein Passwort ein",
+      "buttonLabel": "Registrieren",
+      "haveAccount": "Hast du bereits ein Konto?",
+      "accountLink": "Anmelden"
+    },
+    "Login": {
+      "title": "Anmelden",
+      "newToSpeakUp": "Neu bei Speak Up?",
+      "email": "E-Mail",
+      "emailPlaceholder": "Gib deine E-Mail ein",
+      "password": "Passwort",
+      "rememberMe": "Angemeldet bleiben",
+      "forgotPassword": "Passwort vergessen",
+      "passwordPlaceholder": "Gib dein Passwort ein",
+      "buttonLabel": "Einloggen",
+      "orContinueWith": "Oder fortfahren mit",
+      "DontHaveAccount": "Noch kein Konto?",
+      "accountLink": "Registrieren"
+    },
+    "validation": {
+      "fullNameMin": "Der vollständige Name muss mindestens 3 Zeichen haben",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "passwordMin": "Das Passwort muss mindestens 6 Zeichen haben"
+    }
   }
 }

@@ -24,5 +24,39 @@
   },
   "home": {
     "title": "Hello"
+  },
+  "auth": {
+    "welcomeText": "Welcome, Looks like you’re new here!",
+    "signUp": {
+      "title": "Sign Up",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "buttonLabel": "Sign Up",
+      "haveAccount": "Already have an Account",
+      "accountLink": "Login"
+    },
+    "Login": {
+      "title": "Login",
+      "newToSpeakUp": "New to Speak Up",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "rememberMe": "Remember Me",
+      "forgotPassword": "Forgot Password",
+      "passwordPlaceholder": "Enter your password",
+      "buttonLabel": "Sign In",
+      "orContinueWith": "Or continue with",
+      "DontHaveAccount": "Don't have an Account",
+      "accountLink": "Sign Up"
+    },
+    "validation": {
+      "fullNameMin": "Full name must be at least 3 characters",
+      "invalidEmail": "Invalid email address",
+      "passwordMin": "Password must be at least 6 characters"
+    }
   }
 }
