@@ -23,6 +23,19 @@
     "copyRight": "2026 Speakup. Tous droits réservés."
   },
   "home": {
-    "title": "Bonjour"
+    "premiumDiscountBanner": "Obtenez 50 % de réduction sur SpeakUp Premium et débloquez de nouveaux superpouvoirs linguistiques !",
+    "bannerTitle": "Étudier en ligne est maintenant beaucoup plus facile.",
+    "bannerDesc": "Speak Up est une plateforme engageante qui vous enseigne de manière plus interactive.",
+    "ctaButton": "Commençons",
+    "learnFromHome": "Vous pouvez apprendre en ligne depuis le confort de votre maison.",
+    "englishTestDescription": "Speak Up est un test en ligne rapide et pratique qui aide les établissements d'enseignement supérieur et les employeurs à évaluer le niveau d'anglais des individus et des groupes.",
+    "sixMonthsFaster": "Améliorez vos compétences orales jusqu'à 6 mois plus rapidement.",
+    "teacherResources": "Notre gamme de ressources pédagogiques gratuites, de plans de cours et d'activités est conçue pour vous aider à préparer vos élèves à nos examens et tests. Nous proposons également diverses qualifications, cours et supports pour vous accompagner en tant qu'enseignant.",
+    "funFact": "Fait amusant :",
+    "funFactMessageRetention": "Saviez-vous que vous retenez 95 % d’un message lorsqu’il est regardé contre seulement 10 % de ce que vous lisez ? Essayez-le !",
+    "learningOptions": "Vous pouvez apprendre en ligne ou assister à des cours en présentiel.",
+    "englishTest": "Speak Up est un test en ligne rapide et pratique qui aide les établissements d’enseignement supérieur et les employeurs à évaluer le niveau d’anglais des individus et des groupes de candidats.",
+    "inspireLearners": "Ensemble, nous inspirons les apprenants à aller plus loin.",
+    "intro": "Essayez nos tests en ligne rapides et gratuits pour découvrir votre niveau d’anglais et savoir quelle qualification Cambridge English vous convient le mieux. À la fin, vous recevrez des recommandations personnalisées pour améliorer votre anglais."
   }
 }

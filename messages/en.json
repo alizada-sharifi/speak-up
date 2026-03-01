@@ -23,6 +23,19 @@
     "copyRight": "2026 Speakup. All Rights Reserved."
   },
   "home": {
-    "title": "Hello"
+    "premiumDiscountBanner": "Get 50% off SpeakUp Premium & unlock new language superpowers!",
+    "bannerTitle": "Studying online is now much easier.",
+    "bannerDesc": "Speak Up is an engaging platform that teaches you in a more interactive way.",
+    "ctaButton": "Let’s start",
+    "learnFromHome": "You can learn online from the comfort of your home.",
+    "englishTestDescription": "Speak Up is a fast and convenient online test that helps higher education institutions and employers assess the English proficiency of individuals and groups.",
+    "sixMonthsFaster": "Improve your speaking skills up to 6 months faster.",
+    "teacherResources": "Our range of free teaching resources, lesson plans, and activities is designed to help you prepare your students for our exams and tests. We also offer a variety of teaching qualifications, courses, and support to assist you as a teacher.",
+    "funFact": "Fun fact:",
+    "funFactMessageRetention": "Did you know you remember 95% of a message when you watch it vs only 10% of what you read? Try it!",
+    "learningOptions": "You can learn online or attend classes in person.",
+    "englishTest": "Speak Up is a fast and convenient online test that helps higher education institutions and employers assess the English levels of individuals and groups of candidates.",
+    "inspireLearners": "Together we inspire learners to go further.",
+    "intro": "Try our quick, free online tests to discover your English level and see which Cambridge English Qualification suits you best. At the end, you will receive personalized recommendations on how to improve your English."
   }
 }
