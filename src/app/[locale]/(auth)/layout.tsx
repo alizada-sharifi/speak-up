@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { Toaster } from 'sonner';
 
 export default function AuthLayout({
   children,
@@ -9,6 +10,15 @@ export default function AuthLayout({
   const t = useTranslations('auth');
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
+      <Toaster
+        richColors
+        toastOptions={{
+          classNames: {
+            success: 'bg-white text-green-500',
+            error: 'bg-white text-red-500',
+          },
+        }}
+      />
       <div className="grid grid-cols-1 md:grid-cols-2 py-10 w-3xl mx-auto rounded-md">
         <div className="relative">
           <Image

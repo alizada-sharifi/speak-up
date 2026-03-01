@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
-export const createAuthSchema = (t: ReturnType<typeof useTranslations>) =>
+export const signUpSchema = (t: ReturnType<typeof useTranslations>) =>
   z.object({
     fullName: z.string().min(3, t('validation.fullNameMin')),
 
@@ -10,4 +10,4 @@ export const createAuthSchema = (t: ReturnType<typeof useTranslations>) =>
     password: z.string().min(6, t('validation.passwordMin')),
   });
 
-export type UserFormValues = z.infer<ReturnType<typeof createAuthSchema>>;
+export type SignUpFormValues = z.infer<ReturnType<typeof signUpSchema>>;

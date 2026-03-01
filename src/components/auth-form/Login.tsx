@@ -2,7 +2,6 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { createAuthSchema, UserFormValues } from '@/schema/AuthSchema';
 import { Input } from '@/components/custom-input/Input';
 import { Button } from '@/components/ui/button';
 import { Link, useRouter } from '@/i18n/navigation';
@@ -10,39 +9,42 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { authClient } from '@/lib/auth-client';
 import { useState } from 'react';
+import { toast } from 'sonner';
+import { LoginFormValues, LoginSchema } from '@/schema/auth/Login';
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations('auth');
-  const schema = createAuthSchema(t);
+  const schema = LoginSchema(t);
   const router = useRouter();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UserFormValues>({
+  } = useForm<LoginFormValues>({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = async (authData: UserFormValues) => {
+  const onSubmit = async (authData: LoginFormValues) => {
     setIsLoading(true);
     console.log(authData);
     try {
-      const { data, error } = await authClient.signUp.email({
+      const { data, error } = await authClient.signIn.email({
         email: authData.email,
         password: authData.password,
-        name: authData.fullName,
       });
 
       if (data) {
         console.log(data);
+        toast.success('Logged in successfully');
         router.push('/');
       } else {
         console.log(error);
       }
     } catch (err) {
       console.error(err);
+      toast.error('Logged in Failed');
     } finally {
       setIsLoading(false);
     }

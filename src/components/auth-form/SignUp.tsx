@@ -2,29 +2,30 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { createAuthSchema, UserFormValues } from '@/schema/AuthSchema';
 import { Input } from '@/components/custom-input/Input';
 import { Button } from '@/components/ui/button';
-import { Link, useRouter } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { authClient } from '@/lib/auth-client';
 import { useState } from 'react';
+import { toast } from 'sonner';
+import { SignUpFormValues, signUpSchema } from '@/schema/auth/SignUp';
 
 export default function SignUp() {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations('auth');
-  const schema = createAuthSchema(t);
-  const router = useRouter();
+  const schema = signUpSchema(t);
+  // const router = useRouter();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UserFormValues>({
+  } = useForm<SignUpFormValues>({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = async (authData: UserFormValues) => {
+  const onSubmit = async (authData: SignUpFormValues) => {
     setIsLoading(true);
     console.log(authData);
     try {
@@ -36,12 +37,14 @@ export default function SignUp() {
 
       if (data) {
         console.log(data);
-        router.push('/');
+        toast.success('Sign up successfully');
+        // router.push('/');
       } else {
         console.log(error);
       }
     } catch (err) {
       console.error(err);
+      toast.error('Sign up Failed');
     } finally {
       setIsLoading(false);
     }
@@ -118,7 +121,7 @@ export default function SignUp() {
       <div className="flex justify-center gap-1 text-center text-sm">
         <p className="text-center">{t('signUp.haveAccount')}</p>
         <Link href="/login" className="text-primary-400">
-          {t('signUp.buttonLabel')}
+          {t('signUp.accountLink')}
         </Link>
       </div>
     </form>

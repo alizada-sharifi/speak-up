@@ -4,6 +4,7 @@ import clientPromise from './db';
 
 const client = await clientPromise;
 
+console.log(process.env.MONGODB_DB_NAME);
 export const auth = betterAuth({
   database: mongodbAdapter(client.db(process.env.MONGODB_DB_NAME)),
   emailAndPassword: {
