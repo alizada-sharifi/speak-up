@@ -18,7 +18,7 @@ export default function AuthLayout({
             height={320}
             className="object-cover w-full rounded-l-md hidden md:block"
           />
-          <p className="text-neutral-500 max-w-40 text-sm absolute top-7 left-6">
+          <p className="text-neutral-500 hidden md:block max-w-40 text-sm absolute top-7 left-6">
             {t('welcomeText')}
           </p>
         </div>
