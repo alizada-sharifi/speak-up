@@ -11,6 +11,7 @@ import LnaguageSwitcher from './LnaguageSwitcher';
 import { cn } from '@/lib/utils';
 import MobileNav from './MobileNav';
 import { authClient } from '@/lib/auth-client';
+import { Button } from '../ui/button';
 
 function Header() {
   const { data: session } = authClient.useSession();
@@ -50,9 +51,17 @@ function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link href={'/'}>
-            <User />
-          </Link>
+          {session ? (
+            <Link href={'/settings'}>
+              <User />
+            </Link>
+          ) : (
+            <Button variant="default">
+              <Link href={'/settings'}>
+                <User />
+              </Link>
+            </Button>
+          )}
 
           <LnaguageSwitcher />
         </div>
