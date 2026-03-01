@@ -13,3 +13,25 @@ export const lnaguages: { flag: string; label: string; value: string }[] = [
   { flag: "/images/GP.svg", label: "France", value: "fr" },
   { flag: "/images/TR.svg", label: "Turkiye", value: "tr" },
 ];
+
+export const footerData = [
+  {
+    title: "footer.courses",
+    values: [
+      { label: "footer.learnEnglish", value: "/" },
+      { label: "footer.learnFrench", value: "/" },
+      { label: "footer.learnTurkey", value: "/" },
+      { label: "footer.learnGerman", value: "/" },
+    ],
+  },
+
+  {
+    title: "footer.products",
+    values: [
+      { label: "navigation.landingPage", value: "/" },
+      { label: "navigation.about", value: "/" },
+      { label: "navigation.contact", value: "/" },
+      { label: "navigation.courses", value: "/" },
+    ],
+  },
+];

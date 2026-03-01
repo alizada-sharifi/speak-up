@@ -1,9 +1,29 @@
 {
+  "common": {
+    "privacyPolicy": "Datenschutzbestimmungen",
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "startCourse": "Lernen starten",
+    "lessons": "Lektionen",
+    "students": "Studenten"
+  },
   "navigation": {
     "home": "Startseite",
     "courses": "Kurse",
     "contact": "Kontakt",
-    "about": "Über uns"
+    "about": "Über uns",
+    "landingPage": "Landingpage"
+  },
+  "footer": {
+    "desc": "Flüssigkeit ist nichts anderes, als die 100 wichtigsten realen Gespräche zu meistern",
+    "courses": "Speak up Kurse",
+    "learnEnglish": "Englisch lernen",
+    "learnFrench": "Französisch lernen",
+    "learnTurkey": "Türkisch lernen",
+    "learnGerman": "Deutsch lernen",
+    "products": "Produkte",
+    "contactInfo": "Kontaktinformationen",
+    "address": "Herat, Afghanistan",
+    "copyRight": "2026 Speakup. Alle Rechte vorbehalten."
   },
   "home": {
     "title": "Hallo"
@@ -40,6 +60,22 @@
       "fullNameMin": "Der vollständige Name muss mindestens 3 Zeichen haben",
       "invalidEmail": "Ungültige E-Mail-Adresse",
       "passwordMin": "Das Passwort muss mindestens 6 Zeichen haben"
-    }
+    },
+    "premiumDiscountBanner": "Erhalte 50 % Rabatt auf SpeakUp Premium und schalte neue Sprach-Superkräfte frei!",
+    "bannerTitle": "Online zu lernen ist jetzt viel einfacher.",
+    "bannerDesc": "Speak Up ist eine interessante Plattform, die dir auf eine interaktivere Weise das Lernen ermöglicht.",
+    "ctaButton": "Lass uns starten",
+    "learnFromHome": "Sie können bequem von zu Hause aus online lernen.",
+    "englishTestDescription": "Speak Up ist ein schneller und praktischer Online-Test, der Hochschulen und Arbeitgebern hilft, die Englischkenntnisse von Einzelpersonen und Gruppen zu bewerten.",
+    "sixMonthsFaster": "Verbessern Sie Ihre Sprechfähigkeiten bis zu 6 Monate schneller.",
+    "teacherResources": "Ücretsiz öğretim kaynaklarımız, ders planlarımız ve etkinliklerimiz, öğrencilerinizi sınav ve testlerimize hazırlamanıza yardımcı olmak için tasarlanmıştır. Ayrıca, öğretmen olarak size yardımcı olacak çeşitli öğretim yeterlilikleri, kurslar ve destekler de sunuyoruz.",
+    "funFact": "Fun-Fact:",
+    "funFactMessageRetention": "Wusstest du, dass du 95 % einer Botschaft behältst, wenn du sie siehst, aber nur 10 % von dem, was du liest? Probier es aus!",
+    "learningOptions": "Sie können online lernen oder am Präsenzunterricht teilnehmen.",
+    "englishTest": "Speak Up ist ein schneller und praktischer Online-Test, der Hochschulen und Arbeitgebern hilft, die Englischkenntnisse von Einzelpersonen und Gruppen von Kandidaten zu bewerten.",
+    "inspireLearners": "Gemeinsam inspirieren wir Lernende, weiterzugehen.",
+    "intro": "Probieren Sie unsere schnellen, kostenlosen Online-Tests, um Ihr Englischniveau herauszufinden und zu sehen, welche Cambridge English Qualification am besten zu Ihnen passt. Am Ende erhalten Sie personalisierte Empfehlungen, wie Sie Ihr Englisch verbessern können.",
+    "popularCourses": "Beliebte Kurse",
+    "seeAllCourses": "Alle Kurse anzeigen"
   }
 }
