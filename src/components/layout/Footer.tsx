@@ -16,6 +16,8 @@ async function Footer() {
           <div className="flex items-center gap-6 mt-4">
             <Facebook />
             <Linkedin />
+
+            
             <X />
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import CustomInput from '@/components/custom-input/Input';
+import CustomInput from '@/components/custom-input/custom-input';
 import { Button } from '@/components/ui/button';
 import { Link, useRouter } from '@/i18n/navigation';
 import Image from 'next/image';
