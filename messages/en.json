@@ -35,7 +35,11 @@
       "orContinueWith": "Or continue with",
       "DontHaveAccount": "Don't have an Account",
       "accountLink": "Sign Up"
-
+    },
+    "validation": {
+      "fullNameMin": "Full name must be at least 3 characters",
+      "invalidEmail": "Invalid email address",
+      "passwordMin": "Password must be at least 6 characters"
     }
   }
 }

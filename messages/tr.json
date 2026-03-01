@@ -35,6 +35,11 @@
       "orContinueWith": "Ya da şununla devam et",
       "DontHaveAccount": "Hesabınız yok mu?",
       "accountLink": "Kayıt Ol"
+    },
+    "validation": {
+      "fullNameMin": "Ad soyad en az 3 karakter olmalıdır",
+      "invalidEmail": "Geçersiz e-posta adresi",
+      "passwordMin": "Şifre en az 6 karakter olmalıdır"
     }
   }
 }

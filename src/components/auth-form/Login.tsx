@@ -2,24 +2,22 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { authSchema, UserFormValues } from '@/schema/AuthSchema';
+import { createAuthSchema, UserFormValues } from '@/schema/AuthSchema';
 import { Input } from '@/components/custom-input/Input';
-import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-type FormValues = z.infer<typeof authSchema>;
-
 export default function Login() {
   const t = useTranslations('auth');
+  const schema = createAuthSchema(t);
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>({
-    resolver: zodResolver(authSchema),
+  } = useForm<UserFormValues>({
+    resolver: zodResolver(schema),
   });
 
   const onSubmit = (data: UserFormValues) => {

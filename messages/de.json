@@ -35,6 +35,11 @@
       "orContinueWith": "Oder fortfahren mit",
       "DontHaveAccount": "Noch kein Konto?",
       "accountLink": "Registrieren"
+    },
+    "validation": {
+      "fullNameMin": "Der vollständige Name muss mindestens 3 Zeichen haben",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "passwordMin": "Das Passwort muss mindestens 6 Zeichen haben"
     }
   }
 }
