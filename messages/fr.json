@@ -1,7 +1,10 @@
 {
   "common": {
     "privacyPolicy": "Politique de confidentialité",
-    "terms": "Conditions générales"
+    "terms": "Conditions générales",
+    "startCourse": "Commencer",
+    "lessons": "Leçons",
+    "students": "Étudiants"
   },
   "navigation": {
     "home": "Accueil",
@@ -36,6 +39,8 @@
     "learningOptions": "Vous pouvez apprendre en ligne ou assister à des cours en présentiel.",
     "englishTest": "Speak Up est un test en ligne rapide et pratique qui aide les établissements d’enseignement supérieur et les employeurs à évaluer le niveau d’anglais des individus et des groupes de candidats.",
     "inspireLearners": "Ensemble, nous inspirons les apprenants à aller plus loin.",
-    "intro": "Essayez nos tests en ligne rapides et gratuits pour découvrir votre niveau d’anglais et savoir quelle qualification Cambridge English vous convient le mieux. À la fin, vous recevrez des recommandations personnalisées pour améliorer votre anglais."
+    "intro": "Essayez nos tests en ligne rapides et gratuits pour découvrir votre niveau d’anglais et savoir quelle qualification Cambridge English vous convient le mieux. À la fin, vous recevrez des recommandations personnalisées pour améliorer votre anglais.",
+    "popularCourses": "Cours populaires",
+    "seeAllCourses": "Voir tous les cours"
   }
 }

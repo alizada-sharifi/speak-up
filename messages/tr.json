@@ -1,7 +1,10 @@
 {
   "common": {
     "privacyPolicy": "Gizlilik Politikası",
-    "terms": "Şartlar ve Koşullar"
+    "terms": "Şartlar ve Koşullar",
+    "startCourse": "Öğrenmeye Başla",
+    "lessons": "Dersler",
+    "students": "Öğrenciler"
   },
   "navigation": {
     "home": "Ana Sayfa",
@@ -36,6 +39,8 @@
     "learningOptions": "Online öğrenebilir veya sınıfta derslere katılabilirsiniz.",
     "englishTest": "Speak Up, yükseköğretim kurumlarının ve işverenlerin bireylerin ve aday gruplarının İngilizce seviyelerini değerlendirmesine yardımcı olan hızlı ve pratik bir çevrimiçi testtir.",
     "inspireLearners": "Birlikte öğrenenleri daha ileri gitmeleri için ilham veriyoruz.",
-    "intro": "Hızlı ve ücretsiz çevrimiçi testlerimizi deneyerek İngilizce seviyenizi öğrenin ve hangi Cambridge English Sertifikası sizin için en uygun olduğunu görün. Testin sonunda İngilizcenizi geliştirmek için kişiselleştirilmiş öneriler alacaksınız."
+    "intro": "Hızlı ve ücretsiz çevrimiçi testlerimizi deneyerek İngilizce seviyenizi öğrenin ve hangi Cambridge English Sertifikası sizin için en uygun olduğunu görün. Testin sonunda İngilizcenizi geliştirmek için kişiselleştirilmiş öneriler alacaksınız.",
+    "popularCourses": "Popüler Kurslar",
+    "seeAllCourses": "Tüm kursları gör"
   }
 }

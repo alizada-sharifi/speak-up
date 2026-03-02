@@ -1,7 +1,10 @@
 {
   "common": {
     "privacyPolicy": "Privacy Policy",
-    "terms": "Terms & Conditions"
+    "terms": "Terms & Conditions",
+    "startCourse": "Start Learning",
+    "lessons": "Lessons",
+    "students": "Students"
   },
   "navigation": {
     "home": "Home",
@@ -36,6 +39,8 @@
     "learningOptions": "You can learn online or attend classes in person.",
     "englishTest": "Speak Up is a fast and convenient online test that helps higher education institutions and employers assess the English levels of individuals and groups of candidates.",
     "inspireLearners": "Together we inspire learners to go further.",
-    "intro": "Try our quick, free online tests to discover your English level and see which Cambridge English Qualification suits you best. At the end, you will receive personalized recommendations on how to improve your English."
+    "intro": "Try our quick, free online tests to discover your English level and see which Cambridge English Qualification suits you best. At the end, you will receive personalized recommendations on how to improve your English.",
+    "popularCourses": "Popular Courses",
+    "seeAllCourses":"See all courses"
   }
 }
