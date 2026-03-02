@@ -1,7 +1,10 @@
 {
   "common": {
     "privacyPolicy": "Gizlilik Politikası",
-    "terms": "Şartlar ve Koşullar"
+    "terms": "Şartlar ve Koşullar",
+    "startCourse": "Öğrenmeye Başla",
+    "lessons": "Dersler",
+    "students": "Öğrenciler"
   },
   "navigation": {
     "home": "Ana Sayfa",
@@ -23,6 +26,21 @@
     "copyRight": "2026 Speakup. Tüm hakları saklıdır."
   },
   "home": {
-    "title": "Merhaba"
+    "premiumDiscountBanner": "SpeakUp Premium'da %50 indirim kazanın ve yeni dil süper güçlerinin kilidini açın!",
+    "bannerTitle": "Online öğrenmek artık çok daha kolay.",
+    "bannerDesc": "Speak Up, sizi daha etkileşimli bir şekilde eğiten ilgi çekici bir platformdur.",
+    "ctaButton": "Başlayalım",
+    "learnFromHome": "Evinizin rahatlığında online öğrenebilirsiniz.",
+    "englishTestDescription": "Speak Up, yükseköğretim kurumlarının ve işverenlerin bireylerin ve grupların İngilizce seviyelerini değerlendirmesine yardımcı olan hızlı ve pratik bir çevrimiçi testtir.",
+    "sixMonthsFaster": "Konuşma becerilerinizi 6 aya kadar daha hızlı geliştirin.",
+    "teacherResources": "Unser Angebot an kostenlosen Lehrmaterialien, Unterrichtsplänen und Aktivitäten ist darauf ausgelegt, Sie bei der Vorbereitung Ihrer Schüler auf unsere Prüfungen und Tests zu unterstützen. Außerdem bieten wir verschiedene Lehrqualifikationen, Kurse und Unterstützung für Lehrkräfte an.",
+    "funFact": "Eğlenceli bilgi:",
+    "funFactMessageRetention": "Biliyor muydunuz, bir mesajı izlediğinizde %95, okuduğunuzda ise sadece %10 hatırlıyorsunuz? Deneyin",
+    "learningOptions": "Online öğrenebilir veya sınıfta derslere katılabilirsiniz.",
+    "englishTest": "Speak Up, yükseköğretim kurumlarının ve işverenlerin bireylerin ve aday gruplarının İngilizce seviyelerini değerlendirmesine yardımcı olan hızlı ve pratik bir çevrimiçi testtir.",
+    "inspireLearners": "Birlikte öğrenenleri daha ileri gitmeleri için ilham veriyoruz.",
+    "intro": "Hızlı ve ücretsiz çevrimiçi testlerimizi deneyerek İngilizce seviyenizi öğrenin ve hangi Cambridge English Sertifikası sizin için en uygun olduğunu görün. Testin sonunda İngilizcenizi geliştirmek için kişiselleştirilmiş öneriler alacaksınız.",
+    "popularCourses": "Popüler Kurslar",
+    "seeAllCourses": "Tüm kursları gör"
   }
 }
