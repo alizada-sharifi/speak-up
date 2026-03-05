@@ -12,12 +12,14 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { Form } from '@/components/ui/form';
 import { LoginFormValues, LoginSchema } from '@/schema/auth/Login';
+import { createAuthClient } from 'better-auth/react';
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations('auth');
   const schema = LoginSchema(t);
   const router = useRouter();
+  const { signIn } = createAuthClient();
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(schema),
@@ -168,14 +170,17 @@ export default function Login() {
           </div>
 
           <div className="flex gap-3 items-center justify-center">
-            <Link href="#">
+            <button
+              className="cursor-pointer"
+              onClick={() => signIn.social({ provider: 'google' })}
+            >
               <Image
                 src="/images/auth/google.svg"
                 alt="google"
                 width={24}
                 height={24}
               />
-            </Link>
+            </button>
 
             <Link href="#">
               <Image
