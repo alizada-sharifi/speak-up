@@ -19,8 +19,19 @@ export default function Login() {
   const t = useTranslations('auth');
   const schema = LoginSchema(t);
   const router = useRouter();
+
+  // google sign in
   const { signIn } = createAuthClient();
 
+  // linkedin
+  const signInWithLinkedin = async () => {
+    const res = await authClient.signIn.social({
+      provider: 'linkedin',
+    });
+    if (res?.data) {
+      console.log('🚀 ~ signInWithLinkedin ~ res?.data:', res?.data);
+    }
+  };
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -182,14 +193,14 @@ export default function Login() {
               />
             </button>
 
-            <Link href="#">
+            <button className="cursor-pointer" onClick={signInWithLinkedin}>
               <Image
-                src="/images/auth/facebook.svg"
+                src="/images/auth/linkedin.png"
                 alt="facebook"
-                width={24}
-                height={24}
+                width={34}
+                height={34}
               />
-            </Link>
+            </button>
 
             <Link href="#">
               <Image
@@ -203,9 +214,9 @@ export default function Login() {
         </div>
 
         <div className="flex justify-center gap-1 text-center text-sm">
-          <p className="text-center">{t('Login.DontHaveAccount')}</p>
+          <p className="text-center">{t('Login.accountLink')}</p>
           <Link href="/sign-up" className="text-primary-400">
-            {t('Login.buttonLabel')}
+            {t('Login.accountLink')}
           </Link>
         </div>
       </form>

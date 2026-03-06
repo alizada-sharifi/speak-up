@@ -15,6 +15,7 @@ import { Button } from '../ui/button';
 
 function Header() {
   const { data: session } = authClient.useSession();
+  console.log('🚀 ~ Header ~ session:', session);
 
   const t = useTranslations('navigation');
   const pathname = usePathname();

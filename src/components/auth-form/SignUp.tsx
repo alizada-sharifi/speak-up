@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import CustomInput from '@/components/custom-input/custom-input';
 import { Button } from '@/components/ui/button';
-import { Link } from '@/i18n/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { authClient } from '@/lib/auth-client';
 import { useState } from 'react';
@@ -16,7 +16,7 @@ export default function SignUp() {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations('auth');
   const schema = signUpSchema(t);
-  // const router = useRouter();
+  const router = useRouter();
 
   const form = useForm<SignUpFormValues>({
     resolver: zodResolver(schema),
@@ -40,7 +40,7 @@ export default function SignUp() {
       if (data) {
         console.log(data);
         toast.success('Sign up successfully');
-        // router.push('/');
+        router.push('/');
       } else {
         console.log(error);
       }
