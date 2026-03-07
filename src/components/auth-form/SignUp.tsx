@@ -4,19 +4,20 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import CustomInput from '@/components/custom-input/custom-input';
 import { Button } from '@/components/ui/button';
-import { Link } from '@/i18n/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { authClient } from '@/lib/auth-client';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { SignUpFormValues, signUpSchema } from '@/schema/auth/SignUp';
 import { Form } from '../ui/form';
+import { ROUTES } from '@/constants/route';
 
 export default function SignUp() {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations('auth');
   const schema = signUpSchema(t);
-  // const router = useRouter();
+  const router = useRouter();
 
   const form = useForm<SignUpFormValues>({
     resolver: zodResolver(schema),
@@ -40,7 +41,7 @@ export default function SignUp() {
       if (data) {
         console.log(data);
         toast.success('Sign up successfully');
-        // router.push('/');
+        router.push('/');
       } else {
         console.log(error);
       }
@@ -120,7 +121,7 @@ export default function SignUp() {
 
         <div className="flex justify-center gap-1 text-center text-sm">
           <p className="text-center">{t('signUp.haveAccount')}</p>
-          <Link href="/login" className="text-primary-400">
+          <Link href={ROUTES.LOGIN} className="text-primary-400">
             {t('signUp.accountLink')}
           </Link>
         </div>
