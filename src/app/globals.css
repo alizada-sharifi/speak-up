@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -42,6 +42,9 @@
   --color-neutral-500: #282828;
   --color-neutral-600: #1d1d1d;
   --color-neutral-700: #0c0c0c;
+
+  /* =================== auth bg color ================ */
+  --color-auth: #e9effd;
 }
 
 @theme inline {

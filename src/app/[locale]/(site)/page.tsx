@@ -1,18 +1,18 @@
-import { CourseCard, CourseCardSkeleton, CustomButton } from "@/components";
-import { fakeCourseData } from "@/constants/data";
-import { ROUTES } from "@/constants/route";
-import { Link } from "@/i18n/navigation";
-import { ChevronRight } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import Image from "next/image";
+import { CourseCard, CourseCardSkeleton, CustomButton } from '@/components';
+import { fakeCourseData } from '@/constants/data';
+import { ROUTES } from '@/constants/route';
+import { Link } from '@/i18n/navigation';
+import { ChevronRight } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 
 async function Page() {
-  const t = await getTranslations("home");
+  const t = await getTranslations('home');
 
   return (
     <>
       <p className="bg-primary-800 text-secondary-200 text-sm py-2 text-center font-semibold max-sm:text-xs animate-marquee">
-        {t("premiumDiscountBanner")}
+        {t('premiumDiscountBanner')}
       </p>
 
       {/* ================ hero section ============== */}
@@ -20,14 +20,14 @@ async function Page() {
         <div className="containers grid md:grid-cols-2 gap-10 items-center">
           <div className="text-white flex flex-col gap-3 max-md:items-center">
             <h1 className="font-bold text-xl sm:text-2xl md:text-4xl max-md:text-center">
-              {t("bannerTitle")}
+              {t('bannerTitle')}
             </h1>
 
             <p className="md:textlg lg:text-xl max-md:text-center">
-              {t("bannerDesc")}
+              {t('bannerDesc')}
             </p>
 
-            <CustomButton variant="secondary">{t("ctaButton")}</CustomButton>
+            <CustomButton variant="secondary">{t('ctaButton')}</CustomButton>
           </div>
 
           <Image
@@ -44,17 +44,17 @@ async function Page() {
         <section className="grid lg:grid-cols-3 justify-between items-center gap-10">
           <div className="bg-white shadow-sm border border-neutral-200 rounded-lg p-4 lg:col-span-1">
             <h2 className="text-primary-400 font-bold text-lg md:text-xl lg:text-2xl text-center mb-3">
-              {t("learnFromHome")}
+              {t('learnFromHome')}
             </h2>
 
             <p className="text-neutral-300 max-md:text-sm  ">
-              {t("englishTestDescription")}
+              {t('englishTestDescription')}
             </p>
           </div>
 
           <div className="lg:col-span-2 space-y-4">
             <Image
-              src={"/images/image-1.webp"}
+              src={'/images/image-1.webp'}
               alt="banner image"
               width={500}
               height={200}
@@ -62,18 +62,18 @@ async function Page() {
             />
 
             <h3 className="font-bold text-neutral-600 text-lg md:text-2xl lg:text-3xl">
-              {t("sixMonthsFaster")}
+              {t('sixMonthsFaster')}
             </h3>
 
             <p className="max-sm:text-sm text-neutral-300 md:text-lg lg:text-xl ">
-              {t("teacherResources")}
+              {t('teacherResources')}
             </p>
 
             <div className="bg-white p-3 border border-neutral-600 rounded-md">
-              <b className="font-semibold text-sm mb-1.5">{t("funFact")}</b>
+              <b className="font-semibold text-sm mb-1.5">{t('funFact')}</b>
 
               <p className="max-sm:text-xs text-sm text-neutral-300">
-                {t("funFactMessageRetention")}
+                {t('funFactMessageRetention')}
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ async function Page() {
         {/* =============== learn online and sit in class ======== */}
         <section className="grid md:grid-cols-2 gap-10">
           <Image
-            src={"/images/image-1.webp"}
+            src={'/images/image-1.webp'}
             alt="banner image"
             width={500}
             height={200}
@@ -91,11 +91,11 @@ async function Page() {
 
           <div>
             <b className="sm:text-lg md:text-2xl lg:text-3xl text-neutral-600">
-              {t("learningOptions")}
+              {t('learningOptions')}
             </b>
 
             <p className="text-neutral-300 max-md:text-sm lg:text-lg mt-3">
-              {t("englishTest")}
+              {t('englishTest')}
             </p>
           </div>
         </section>
@@ -104,16 +104,16 @@ async function Page() {
         <section className="flex max-md:flex-col-reverse gap-10">
           <div>
             <b className="sm:text-lg md:text-2xl lg:text-3xl text-neutral-600">
-              {t("inspireLearners")}
+              {t('inspireLearners')}
             </b>
 
             <p className="text-neutral-300 max-md:text-sm lg:text-lg mt-3">
-              {t("intro")}
+              {t('intro')}
             </p>
           </div>
 
           <Image
-            src={"/images/image-1.webp"}
+            src={'/images/image-1.webp'}
             alt="banner image"
             width={500}
             height={200}
@@ -124,7 +124,7 @@ async function Page() {
         {/* ============== popular courses =========== */}
         <section className="text-center space-y-5">
           <h2 className="font-bold text-start text-primary-700 sm:text-lg md:text-xl lg:text-2xl">
-            {t("popularCourses")}
+            {t('popularCourses')}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -136,7 +136,7 @@ async function Page() {
 
           <Link href={ROUTES.COURSES}>
             <CustomButton variant="primaryOutline" className="px-10! py-5">
-              {t("seeAllCourses")} <ChevronRight />
+              {t('seeAllCourses')} <ChevronRight />
             </CustomButton>
           </Link>
         </section>

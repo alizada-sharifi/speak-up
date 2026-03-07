@@ -1,0 +1,19 @@
+import { MongoClient } from 'mongodb';
+
+console.log("Connected URI:", process.env.MONGODB_URI);
+const uri = process.env.MONGODB_URI!;
+
+if (!uri) {
+  throw new Error('Please add MONGODB_URI to .env');
+}
+
+declare global {
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
+}
+
+const client = new MongoClient(uri);
+
+const clientPromise =
+  global._mongoClientPromise ?? (global._mongoClientPromise = client.connect());
+
+export default clientPromise;

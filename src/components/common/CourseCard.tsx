@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
-import { Book, User } from "../icons";
-import Trophy from "../icons/Trophy";
-import CustomButton from "./CustomButton";
-import { ChevronRight } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import RatingBadge from "./RatingBadge";
+import Image from 'next/image';
+import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
+import { Book, User } from '../icons';
+import Trophy from '../icons/Trophy';
+import CustomButton from './CustomButton';
+import { ChevronRight } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
+import RatingBadge from './RatingBadge';
 
 type Props = {
   imageUrl: string;
@@ -24,7 +24,7 @@ async function CourseCard({
   students,
   title,
 }: Props) {
-  const t = await getTranslations("common");
+  const t = await getTranslations('common');
 
   return (
     <Card className="bg-transparent! shadow-none!">
@@ -41,18 +41,18 @@ async function CourseCard({
       <CardContent>
         <b className="font-semibold text-neutral-500 line-clamp-1">{title}</b>
 
-        <div className="flex items-center justify-between gap-3 mt-3">
+        <div className="flex items-center justify-between gap-3 mt-3 flex-wrap">
           <div className="flex items-center gap-2">
             <Book />
             <span className="text-sm text-neutral-600 font-medium">
-              {t("lessons")} : {lessons}
+              {t('lessons')} : {lessons}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <User />
             <span className="text-sm text-neutral-600 font-medium">
-              {t("students")} : {students}
+              {t('students')} : {students}
             </span>
           </div>
 
@@ -67,7 +67,7 @@ async function CourseCard({
 
       <CardFooter className="flex items-center justify-between">
         <CustomButton>
-          {t("startCourse")} <ChevronRight />
+          {t('startCourse')} <ChevronRight />
         </CustomButton>
 
         <RatingBadge value={completed} />
