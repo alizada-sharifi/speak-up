@@ -53,14 +53,12 @@ function Header() {
 
         <div className="flex items-center gap-4">
           {session ? (
-            <Link href={'/settings'}>
+            <Link href={ROUTES.SETTINGS}>
               <User />
             </Link>
           ) : (
-            <Button variant="default">
-              <Link href={'/settings'}>
-                <User />
-              </Link>
+            <Button variant="default" className="cursor-pointer">
+              <Link href={ROUTES.LOGIN}>Login</Link>
             </Button>
           )}
 

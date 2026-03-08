@@ -13,6 +13,7 @@ import { toast } from 'sonner';
 import { Form } from '@/components/ui/form';
 import { LoginFormValues, LoginSchema } from '@/schema/auth/Login';
 import { createAuthClient } from 'better-auth/react';
+import { ROUTES } from '@/constants/route';
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,10 +21,10 @@ export default function Login() {
   const schema = LoginSchema(t);
   const router = useRouter();
 
-  // google sign in
+  // sign in with google
   const { signIn } = createAuthClient();
 
-  // linkedin
+  // sign in with linkedin
   const signInWithLinkedin = async () => {
     const res = await authClient.signIn.social({
       provider: 'linkedin',
@@ -31,6 +32,14 @@ export default function Login() {
     if (res?.data) {
       console.log('🚀 ~ signInWithLinkedin ~ res?.data:', res?.data);
     }
+  };
+
+  // sign in with discord
+  const signInWithDiscord = async () => {
+    const data = await authClient.signIn.social({
+      provider: 'discord',
+    });
+    console.log('🚀 ~ signInWithDiscord ~ data:', data);
   };
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(schema),
@@ -73,7 +82,7 @@ export default function Login() {
         <h3 className="text-xl md:text-2xl font-bold">{t('Login.title')}</h3>
         <div className="flex gap-1 text-sm">
           <p className="text-center">{t('Login.newToSpeakUp')}?</p>
-          <Link href="/sign-up" className="text-primary-400">
+          <Link href={ROUTES.SIGNUP} className="text-primary-400">
             {t('Login.accountLink')}
           </Link>
         </div>
@@ -132,7 +141,7 @@ export default function Login() {
               </span>
             </label>
           </div>
-          <Link href="/forgot-password" className="hover:text-primary-400">
+          <Link href={ROUTES.FORGOT_PASSWORD} className="hover:text-primary-400">
             {t('Login.forgotPassword')}
           </Link>
         </div>
@@ -202,20 +211,20 @@ export default function Login() {
               />
             </button>
 
-            <Link href="#">
+            <button className="cursor-pointer" onClick={signInWithDiscord}>
               <Image
-                src="/images/auth/instagram.svg"
+                src="/images/auth/discord.webp"
                 alt="instagram"
-                width={24}
-                height={24}
+                width={28}
+                height={28}
               />
-            </Link>
+            </button>
           </div>
         </div>
 
         <div className="flex justify-center gap-1 text-center text-sm">
           <p className="text-center">{t('Login.accountLink')}</p>
-          <Link href="/sign-up" className="text-primary-400">
+          <Link href={ROUTES.SIGNUP} className="text-primary-400">
             {t('Login.accountLink')}
           </Link>
         </div>

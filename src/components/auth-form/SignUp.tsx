@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { SignUpFormValues, signUpSchema } from '@/schema/auth/SignUp';
 import { Form } from '../ui/form';
+import { ROUTES } from '@/constants/route';
 
 export default function SignUp() {
   const [isLoading, setIsLoading] = useState(false);
@@ -120,7 +121,7 @@ export default function SignUp() {
 
         <div className="flex justify-center gap-1 text-center text-sm">
           <p className="text-center">{t('signUp.haveAccount')}</p>
-          <Link href="/login" className="text-primary-400">
+          <Link href={ROUTES.LOGIN} className="text-primary-400">
             {t('signUp.accountLink')}
           </Link>
         </div>
